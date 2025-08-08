@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { ToastContainer } from 'react-toastify';
 
 // Pages
 export { default as HomeLayout } from './HomeLayout';
@@ -19,6 +20,7 @@ import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ToastContainer position="top-center" autoClose={2000} />
     <App />
   </StrictMode>
 );

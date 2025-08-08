@@ -32,22 +32,24 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       { element: <Landing /> },
-      { element: <Products /> },
-      { element: <Cart /> },
-      { element: <About /> },
-      { element: <Register /> },
-      { element: <Order /> },
-      { element: <Login /> },
-      { element: <Checkout /> },
-      { element: <Orders /> },
+      { path: 'products', element: <Products /> },
+      { path: 'products/:id', element: <SingleProduct /> },
+      { path: 'cart', element: <Cart /> },
+      { path: 'about', element: <About /> },
+      { path: 'order', element: <Order /> },
+      { path: 'checkout', element: <Checkout /> },
+      { path: 'orders', element: <Orders /> },
     ],
   },
+  { path: 'login', element: <Login /> },
+  { path: 'register', element: <Register /> },
 ]);
 
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 };
