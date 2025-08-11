@@ -17,6 +17,20 @@ import {
   Orders,
 } from './pages';
 
+// import { ErrorElement } from './components';
+
+// loaders
+// import { loader as landingLoader } from './pages/Landing';
+// import { loader as singleProductLoader } from './pages/SingleProduct';
+// import { loader as productsLoader } from './pages/Products';
+// import { loader as checkoutLoader } from './pages/Checkout';
+// import { loader as ordersLoader } from './pages/Orders';
+// // actions
+// import { action as registerAction } from './pages/Register';
+// import { action as loginAction } from './pages/Login';
+// import { action as checkoutAction } from './components/CheckoutForm';
+// import { store } from './store';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -31,18 +45,44 @@ const router = createBrowserRouter([
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
-      { element: <Landing /> },
-      { path: 'products', element: <Products /> },
-      { path: 'products/:id', element: <SingleProduct /> },
-      { path: 'cart', element: <Cart /> },
-      { path: 'about', element: <About /> },
-      { path: 'order', element: <Order /> },
-      { path: 'checkout', element: <Checkout /> },
-      { path: 'orders', element: <Orders /> },
+      {
+        index: true,
+        element: <Landing />,
+      },
+      {
+        path: 'products',
+        element: <Products />,
+      },
+      {
+        path: 'products/:id',
+        element: <SingleProduct />,
+      },
+      {
+        path: 'cart',
+        element: <Cart />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: 'checkout',
+        element: <Checkout />,
+      },
+      {
+        path: 'orders',
+        element: <Orders />,
+      },
     ],
   },
-  { path: 'login', element: <Login /> },
-  { path: 'register', element: <Register /> },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/register',
+    element: <Register />,
+  },
 ]);
 
 const App = () => {
