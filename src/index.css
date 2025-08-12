@@ -3,9 +3,6 @@
   themes: light --default, dark --prefersdark, dracula, winter ;
 }
 
-
-@layer {
   .align-element {
     @apply mx-auto max-w-6xl px-8;
   }
-}

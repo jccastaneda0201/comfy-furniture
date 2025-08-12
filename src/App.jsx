@@ -31,13 +31,13 @@ import {
 // import { action as checkoutAction } from './components/CheckoutForm';
 // import { store } from './store';
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 5,
-    },
-  },
-});
+// const queryClient = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       staleTime: 1000 * 60 * 5,
+//     },
+//   },
+// });
 
 const router = createBrowserRouter([
   {
@@ -87,10 +87,10 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <RouterProvider router={router} />
+    // <QueryClientProvider client={queryClient}>
+    //   <ReactQueryDevtools initialIsOpen={false} />
+    // </QueryClientProvider>
   );
 };
 
