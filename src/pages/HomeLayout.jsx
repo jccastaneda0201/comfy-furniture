@@ -5,8 +5,6 @@ const HomeLayout = () => {
     <>
       <Header />
       <Navbar />
-      <About />
-      <Hero />
     </>
   );
 };
