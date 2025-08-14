@@ -1,4 +1,4 @@
-import { customFetch } from '../utils';
+import { customFetch } from '../utils/index';
 
 const url = '/products?featured=true';
 
@@ -10,5 +10,7 @@ const featuredProductsQuery = {
 export const loader = (queryClient) => async () => {
   const response = await queryClient.ensureQueryData(featuredProductsQuery);
   const products = response.data.data;
+  console.log(products);
+
   return { products };
 };
