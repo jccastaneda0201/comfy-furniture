@@ -1,7 +1,13 @@
-import React from 'react';
+import { Filters, PaginationContainer, ProductsContainer } from '../components';
 
 const Products = () => {
-  return <div>Products</div>;
+  return (
+    <>
+      <Filters />
+      <ProductsContainer />
+      <PaginationContainer />
+    </>
+  );
 };
 
 export default Products;

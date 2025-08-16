@@ -21,6 +21,7 @@ import { ErrorElement } from './components';
 // loaders
 import { loader as landingLoader } from './pages/landingQueries';
 import { loader as singleProductLoader } from './pages/singleQueries';
+import { loader as productsLoader } from './pages/productQueries';
 
 // actions
 
@@ -47,6 +48,7 @@ const router = createBrowserRouter([
       {
         path: 'products',
         element: <Products />,
+        loader: productsLoader(queryClient),
       },
       {
         path: 'products/:id',
