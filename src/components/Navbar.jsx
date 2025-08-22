@@ -17,7 +17,7 @@ const Navbar = () => {
   //   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   return (
-    <nav className="bg-white">
+    <nav className="bg-transparent">
       <div className="navbar align-element">
         <div className="navbar-start">
           {/* TITLE */}
