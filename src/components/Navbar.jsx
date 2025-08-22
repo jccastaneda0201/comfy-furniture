@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* TITLE */}
           <NavLink
             to="/"
-            className="hidden lg:flex text-3xl items-center font-mono font-bold text-blue-900"
+            className="hidden btn btn-ghost lg:flex text-3xl items-center font-mono font-bold "
           >
             Comfy
             <span className="font-san text-yellow-600">Furniture</span>
@@ -59,9 +59,9 @@ const Navbar = () => {
           </label>
 
           {/* CART LINK */}
-          <NavLink to="/cart" className="btn btn-ghost btn-circle btn-md ml-4">
-            <div className="indicator">
-              <BsCart3 className="h-7 w-7 fill-blue-950" />
+          <NavLink to="/cart" className="btn btn-ghost btn-circle btn-md ml-4 ">
+            <div className="indicator  ">
+              <BsCart3 className="btn btn-ghost rounded-full" />
               <span className=" indicator-item w-4 h-4 rounded-full bg-sky-800 items-center justify-center text-white text-xs font-semibold">
                 1
               </span>

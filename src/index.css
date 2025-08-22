@@ -3,11 +3,8 @@
 
 
 @import "tailwindcss";
-@plugin "daisyui" {}
-@plugin "daisyui/theme" {
-  name: "wireframe";
-  default: true;
-
+@plugin "daisyui" {
+ themes: wireframe --default, dim --business;
 }
 @theme {
   --font-roboto: "Roboto", sans-serif;
