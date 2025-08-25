@@ -5,10 +5,10 @@ const ProductsGrid = () => {
   const { products } = useLoaderData();
 
   return (
-    <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="pt-12  grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {products.map((product) => {
         const { title, price, image } = product.attributes;
-        const dollarsAmount = formatPrice(price);
+        const eurosAmount = formatPrice(price);
         return (
           <Link
             key={product.id}
@@ -22,9 +22,9 @@ const ProductsGrid = () => {
                 className="rounded-xl h-64 md:h-48 w-full object-cover"
               />
             </figure>
-            <div className="card-body items-center text-center">
+            <div className="card-body items-center text-center text-primary">
               <h2 className="card-title capitalize tracking-wider">{title}</h2>
-              <span className="text-secondary">{dollarsAmount}</span>
+              <span className="text-warning text-base tracking-widest">{eurosAmount}</span>
             </div>
           </Link>
         );

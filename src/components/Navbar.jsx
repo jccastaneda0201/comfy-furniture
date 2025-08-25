@@ -23,10 +23,10 @@ const Navbar = () => {
           {/* TITLE */}
           <NavLink
             to="/"
-            className="hidden btn btn-ghost lg:flex text-3xl items-center font-mono font-bold "
+            className="hidden text-primary lg:flex text-3xl items-center font-openSans font-bold "
           >
             Comfy
-            <span className="font-san text-yellow-600">Furniture</span>
+            <span className="font-openSans text-yellow-600">Furniture</span>
           </NavLink>
           {/* DROPDOWN */}
           <div className="dropdown">
@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal text-base text-blue-950 font-roboto font-semibold">
+          <ul className="menu menu-horizontal text-base font-normal font-roboto  text-primary">
             <NavLinks />
           </ul>
         </div>
@@ -59,10 +59,13 @@ const Navbar = () => {
           </label>
 
           {/* CART LINK */}
-          <NavLink to="/cart" className="btn btn-ghost btn-circle btn-md ml-4 ">
-            <div className="indicator  ">
-              <BsCart3 className="btn btn-ghost rounded-full" />
-              <span className=" indicator-item w-4 h-4 rounded-full bg-sky-800 items-center justify-center text-white text-xs font-semibold">
+          <NavLink to="/cart" className="btn btn-ghost btn-circle btn-md ml-4">
+            <div className="indicator">
+              {/* Icono carrito */}
+              <BsCart3 className="w-7 h-7 text-primary" />
+
+              {/* Badge indicador */}
+              <span className="indicator-item badge badge-sm bg-gray-400 text-white border-none shadow-md">
                 1
               </span>
             </div>
