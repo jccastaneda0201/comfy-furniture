@@ -14,7 +14,7 @@ const Hero = () => {
         <h1 className="max-w-2xl text-4xl font-openSans font-bold tracking-tight sm:text-6xl text-primary">
           Experience Comfort & Style
         </h1>
-        <p className="mt-8 max-w-xl text-lg leading-8 text-secondary">
+        <p className="mt-8 max-w-xl text-lg leading-8 text-secondary font-roboto tracking-wider">
           Discover our exclusive collection of modern furniture designed to bring elegance, warmth,
           and unmatched comfort into your home.
         </p>

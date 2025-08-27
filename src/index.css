@@ -1,23 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital;wght@0;300..800;1;300..800&family=Roboto:ital;wght@0;100..900;1;100..900&display=swap');
-
-
 @import "tailwindcss";
 
-@theme {
-  --font-roboto: "Roboto", sans-serif;
-  --font-openSans: "Open Sans", sans-serif;
-}
   .align-element {
     @apply mx-auto max-w-6xl px-8;
   }
-/* @plugin "daisyui" {
- themes: night --default;
-} */
+
+  @theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-openSans: "Open Sans", sans-serif;
+}
+
 @plugin "daisyui"; 
 @plugin "daisyui/theme" {
   name: "comfy";
-  default: true;
+  default: false;
   color-scheme: "light";
   --color-base-100: oklch(98% 0.003 247.858);
   --color-base-200: oklch(96% 0.007 247.896);
@@ -51,7 +47,7 @@
 
 @plugin "daisyui/theme" {
   name: "dark";
-  default: false;
+  default: true;
   prefersdark: true;
   color-scheme: "dark";
  --color-base-100: oklch(30.857% .023 264.149);
@@ -83,5 +79,9 @@
   --depth: 0;
   --noise: 0;
 }
+
+
+
+
 
 

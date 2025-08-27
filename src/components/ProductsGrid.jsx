@@ -23,7 +23,7 @@ const ProductsGrid = () => {
               />
             </figure>
             <div className="card-body items-center text-center text-primary">
-              <h2 className="card-title capitalize tracking-wider">{title}</h2>
+              <h2 className="card-title capitalize font-roboto tracking-wider">{title}</h2>
               <span className="text-warning text-base tracking-widest">{eurosAmount}</span>
             </div>
           </Link>

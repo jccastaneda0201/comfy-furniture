@@ -2,7 +2,7 @@ const FormInput = ({ label, name, type, defaultValue, size }) => {
   return (
     <div className="form-control w-full max-w-md">
       <label htmlFor={name} className="label">
-        <span className="label-text text-lg font-semibold tracking-wide text-[#0e4b8b]">
+        <span className="label-text text-base font-roboto tracking-wide text-[#0e4b8b]">
           {label}
         </span>
       </label>
