@@ -4,17 +4,17 @@ import { FaBarsStaggered } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 
-// import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 // import { toggleTheme } from '../features/user/userSlice';
 
 const Navbar = () => {
-  //   const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  //   const handleTheme = () => {
-  //     dispatch(toggleTheme());
-  //   };
+  // const handleTheme = () => {
+  //   dispatch(toggleTheme());
+  // };
 
-  //   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
+  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   return (
     <nav className="bg-transparent">
@@ -66,7 +66,7 @@ const Navbar = () => {
 
               {/* Badge indicador */}
               <span className="indicator-item badge badge-sm bg-gray-400 text-white border-none shadow-md">
-                1
+                {numItemsInCart}
               </span>
             </div>
           </NavLink>
