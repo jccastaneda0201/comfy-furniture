@@ -23,8 +23,6 @@ import { loader as landingLoader } from './pages/landingQueries';
 import { loader as singleProductLoader } from './pages/singleQueries';
 import { loader as productsLoader } from './pages/productQueries';
 
-// actions
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
