@@ -17,7 +17,7 @@ const Register = () => {
           Already a member?
           <Link
             to="/login"
-            className="ml-2  link link-hover link-secondary font-bold text-xs uppercase underline"
+            className="ml-2  link link-hover text-secondary font-bold text-xs uppercase underline"
           >
             login
           </Link>

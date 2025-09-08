@@ -4,15 +4,15 @@ import { FaBarsStaggered } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 
-import { useSelector } from 'react-redux';
-// import { toggleTheme } from '../features/user/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../features/user/userSlice';
 
 const Navbar = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const handleTheme = () => {
-  //   dispatch(toggleTheme());
-  // };
+  const handleTheme = () => {
+    dispatch(toggleTheme());
+  };
 
   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
@@ -51,11 +51,11 @@ const Navbar = () => {
         <div className="navbar-end">
           {/* THEME SETUP */}
           <label className="swap swap-rotate">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={handleTheme} />
             {/* sun icon*/}
             <BsSun className="swap-on h-7 w-7 fill-amber-500" />
             {/* moon icon*/}
-            <BsMoon className="swap-off h-7 w-7 fill-gray-600" />
+            <BsMoon className="swap-off h-7 w-7 fill-zinc-400" />
           </label>
 
           {/* CART LINK */}
