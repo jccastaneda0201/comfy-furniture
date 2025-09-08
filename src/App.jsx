@@ -22,6 +22,10 @@ import { ErrorElement } from './components';
 import { loader as landingLoader } from './pages/landingQueries';
 import { loader as singleProductLoader } from './pages/singleQueries';
 import { loader as productsLoader } from './pages/productQueries';
+// actions
+import { action as registerAction } from './pages/registerAction';
+import { action as loginAction } from './pages/loginAction';
+import { store } from './store';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -74,10 +78,14 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+    errorElement: <Error />,
+    action: loginAction(store),
   },
   {
     path: '/register',
     element: <Register />,
+    errorElement: <Error />,
+    action: registerAction,
   },
 ]);
 
