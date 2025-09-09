@@ -30,7 +30,7 @@ export const Login = () => {
           Login
         </h4>
         <FormInput type="email" label="Email" name="identifier" defaultValue="test@test.com" />
-        <FormInput type="password" label="Password" name="password" />
+        <FormInput type="password" label="Password" name="password" defaultValue="secret" />
         <div className="mt-4 capitalize">
           <SubmitBtn text="Sign in" />
         </div>

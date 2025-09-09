@@ -12,7 +12,7 @@ const Register = () => {
         <FormInput type="email" label="Email" name="email" />
         <FormInput type="password" label="Password" name="password" />
         <div className="mt-4 capitalize">
-          <SubmitBtn text="Create acount" />
+          <SubmitBtn text="Create account" />
         </div>
         <p className="text-center text-primary">
           Already a member?
