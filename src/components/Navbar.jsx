@@ -1,4 +1,4 @@
-import { BsCart3, BsMoon, BsSun } from 'react-icons/bs';
+import { BsCart3, BsMoon, BsMoonFill, BsSun } from 'react-icons/bs';
 import { FaBarsStaggered } from 'react-icons/fa6';
 
 import { NavLink } from 'react-router-dom';
@@ -53,9 +53,9 @@ const Navbar = () => {
           <label className="swap swap-rotate">
             <input type="checkbox" onChange={handleTheme} />
             {/* sun icon*/}
-            <BsSun className="swap-on h-7 w-7 fill-amber-500" />
+            <BsSun className="swap-off h-7 w-7 fill-amber-500" />
             {/* moon icon*/}
-            <BsMoon className="swap-off h-7 w-7 fill-zinc-400" />
+            <BsMoonFill className="swap-on h-7 w-7 fill-gray-600" />
           </label>
 
           {/* CART LINK */}

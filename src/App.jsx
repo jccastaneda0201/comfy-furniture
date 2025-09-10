@@ -19,12 +19,15 @@ import {
 
 import { ErrorElement } from './components';
 // loaders
-import { loader as landingLoader } from './pages/landingQueries';
-import { loader as singleProductLoader } from './pages/singleQueries';
-import { loader as productsLoader } from './pages/productQueries';
+import { loader as landingLoader } from './pages/landingLoader';
+import { loader as singleProductLoader } from './pages/singleProductLoader';
+import { loader as productsLoader } from './pages/productsLoader';
+import { loader as checkoutLoader } from './pages/checkoutLoader';
+
 // actions
 import { action as registerAction } from './pages/registerAction';
 import { action as loginAction } from './pages/loginAction';
+import { action as checkoutAction } from './components/CheckoutFormAction';
 import { store } from './store';
 
 const queryClient = new QueryClient({
@@ -68,6 +71,8 @@ const router = createBrowserRouter([
       {
         path: 'checkout',
         element: <Checkout />,
+        loader: checkoutLoader(store),
+        action: checkoutAction(store, queryClient),
       },
       {
         path: 'orders',
