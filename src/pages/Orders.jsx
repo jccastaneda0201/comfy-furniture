@@ -1,17 +1,7 @@
-import { useLoaderData } from 'react-router-dom';
-import { OrdersList, ComplexPaginationContainer, SectionTitle } from '../components';
+import React from 'react';
 
 const Orders = () => {
-  const { meta } = useLoaderData();
-  if (meta.pagination.total < 1) {
-    return <SectionTitle text="please make an order" />;
-  }
-  return (
-    <>
-      <SectionTitle text="Your Orders" />
-      <OrdersList />
-      <ComplexPaginationContainer />
-    </>
-  );
+  return <div>Orders</div>;
 };
+
 export default Orders;
